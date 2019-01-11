@@ -33,13 +33,13 @@ namespace siteHost
 
           
     public Site(RequestDelegate next, SiteOptions options)
-        {    
+    {    
             this.next = next;
             this.options = options;
-        }
+    }
 
     public Task Invoke(HttpContext httpContext)
-        {
+    {
             // reference embedded resouces
             const string prefix = "siteHost.SwaggerUI.";
 
@@ -98,7 +98,7 @@ namespace siteHost
             }
 
             return EmptyTask;
-        }
+    }
         
         static string GetMIMEType(string path)
         {
